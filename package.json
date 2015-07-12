@@ -1,6 +1,6 @@
 {
   "name": "trim-trailing-lines",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Remove final newline characters from a string",
   "license": "MIT",
   "keywords": [
