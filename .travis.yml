@@ -1,0 +1,16 @@
+language: node_js
+script: npm run-script test-travis
+node_js:
+- '0.10'
+- '0.11'
+- '0.12'
+- iojs
+sudo: false
+after_script: npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls
+deploy:
+  provider: npm
+  email: tituswormer@gmail.com
+  api_key:
+    secure: ansVbW5tKuMxxHHj6xAR2LZ5CsXNQltVH9DqXYoWBoi3Be1+COs6+DQFdruDr99xiLrvKRpUhJXhnqLX1HEzJRiHcTfK9O1aWRIiaBwHSZfCkZjmHlEiQBvaXQdS8dheXANxeDyNuVvNhgN5At5b+aYu8ww+S4X9JdSh2f8gaJDzEuyHChOdV5rf46iiW8DWJCaeWh7czZV/SLGRmmNbGf7Lq2Jr4q/QHsD6TpDjspI4v85Pe9tJfC8abf6mPUlMnAxpJDCLw0LmpgaPZhb1VWv+qDzaiTj88hqY1IeTYXxpzacXNaVVdbacSt9NuzPRjBNbfBN1F2q0sCeUKvCwY+nO5kq+CwyJMrzdxgdSqzK7nxC/IMNmYRXdJyM+TM2cYq80bvy8Pl4mzMes6LfhvljP48ErZKwXlpIJPvwYlpCrFomyXMVqva+pgupO/bsmFsh3huEz3h+hEajYkJFBIxxNsffnMBACQk3JQmwHZM4N7j4Y1YVqKyACphkBEF6wape5KSXsy979V1H0X3/kW20j0ix23xDfpGserGAMgrj76RsW8vV3yNmGmplisIiEtFNIQqtZTDFA/84wnrydhfWBkBXphb4Q8l5x0Y4xzVhjfTNnrpdxcjj6Tsm5gComsJZyGBzs6n/Kcq24XuD7Sj5xSnE3hVRkCX5wSacBTW4=
+  on:
+    repo: wooorm/trim-trailing-lines
