@@ -23,7 +23,7 @@ Dependencies.
 var trimTrailingLines = require('trim-trailing-lines');
 ```
 
-Trim line-breaks:
+Trim trailing newline characters:
 
 ```javascript
 trimTrailingLines('foo\nbar'); // 'foo\nbar'
