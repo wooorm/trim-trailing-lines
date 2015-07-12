@@ -45,7 +45,6 @@
     "build-md": "mdast . LICENSE --output --quiet",
     "build-bundle": "browserify index.js --bare -s trimTrailingLines > trim-trailing-lines.js",
     "postbuild-bundle": "esmangle trim-trailing-lines.js > trim-trailing-lines.min.js",
-    "build": "npm run build-md && npm run build-bundle",
-    "prepublish": "npm run build"
+    "build": "npm run build-md && npm run build-bundle"
   }
 }
