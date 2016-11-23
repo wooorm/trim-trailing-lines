@@ -32,7 +32,7 @@ Remove final newline characters from `value`.
 
 ###### Returns
 
-string\` — Value without trailing newlines.
+`string` — Value without trailing newlines.
 
 ## License
 
