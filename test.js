@@ -1,20 +1,14 @@
 'use strict';
 
-/* eslint-env mocha */
-
-var assert = require('assert');
+var test = require('tape');
 var trimTrailingLines = require('./');
 
-describe('trimTrailingLines(value)', function () {
-  it('should coerce to string', function () {
-    assert.equal(trimTrailingLines(true), 'true');
-  });
-
-  it('should work', function () {
-    assert.equal(trimTrailingLines(''), '');
-    assert.equal(trimTrailingLines('foo'), 'foo');
-    assert.equal(trimTrailingLines('foo\nbar'), 'foo\nbar');
-    assert.equal(trimTrailingLines('foo\nbar\n'), 'foo\nbar');
-    assert.equal(trimTrailingLines('foo\nbar\n\n'), 'foo\nbar');
-  });
+test('trimTrailingLines(value)', function (t) {
+  t.equal(trimTrailingLines(true), 'true', 'should coerce to string');
+  t.equal(trimTrailingLines(''), '', 'should work (1)');
+  t.equal(trimTrailingLines('foo'), 'foo', 'should work (2)');
+  t.equal(trimTrailingLines('foo\nbar'), 'foo\nbar', 'should work (3)');
+  t.equal(trimTrailingLines('foo\nbar\n'), 'foo\nbar', 'should work (4)');
+  t.equal(trimTrailingLines('foo\nbar\n\n'), 'foo\nbar', 'should work (5)');
+  t.end();
 });
