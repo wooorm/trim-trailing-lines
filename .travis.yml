@@ -4,19 +4,12 @@ node_js:
 - '8.0'
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
-  - provider: npm
-    email: tituswormer@gmail.com
-    api_key:
-      secure: pslRlgSdeT7v9uuBvwFwu5Zcrddbt01kpCj2bpu/Oqd9BIqs9Wlg0q/eFdtpUXQlKfAqOpeQPsgoyol5LvHRnkNbuXUFmt7bNY4R2Nvvr646k2yd9DR8RhCEaS9ucqZN9Mbl4O/LG+iN5DPWSJEY3dGhM/erAo//9CmcDHKQwI8fy+yehO8dyUVNf823qe6zMl9+KXktNSyX0qG5n8Y7W2xyt72EhyWhJk1VG9Eyg6T+zIVXIhw+Wri6aBGdjfXCU+i4+plXuHUKh4B6DV/BxJQbopq9XEQ1mWIt94gvUP8oWK7/nJx2CMEtOqiQ9gP+sjR2GvQvOLi5afAw+x8p8GqJyVAe5x8jOT9wJ21U97FvrZhtg/YNAM2l5EuCGcMTgNerbpEAzHGKsH5xHTzwVn+2gn9xVFY3EWFfPdlQa65wNDX+IuOjpwrrKQnH72xe+6/5mzfgN6nU+4vqTqicEdrUF/tUWvZR317V/z+1eZwurVRPBN+GJf4OaQpngOlZ+TWcs9A9i8uJuQEo7jj1PO2TCw18dBxQphf1e3nJuG9FyJB/JlqjZYoAHdGVffUkRBsndY+nJeAWZAY2r7JAz3Hwt7kugUYeL4TTYtDx6grZkdeWv57Y62iINcOwp2/cxUFXfRspYl6wAU1zeWFkE9Y7U+spify9gdlBo/sp6Vo=
-    on:
-      tags: true
-      node: '4.0'
-  - provider: releases
-    api_key:
-      secure: PEJsl0k2RBHwkljnpyie6tnA2djAtJxoofoC/RSoFa+KIKCtFzoRYNrhYazVde/NYfeCkz5x8Y1sJoE9dew+LoVtoQrkxgdDums3wtNrYKVaa+0swkQBdQM736yrQ3Ec9VpRcGUJPWmJR3PChRLq7K0PkyemfRW0hvTHK3MIrzjB49b0TA3NUjTOYmxn82GDZXEcYz69hPm9GDY7HmWwZvSwv9Sp3dshFuxhT11rev/WQ/OZl/E7j/vESQhDZLJ8ir96e1pno/YQh3MUOb1TPmzdRhSmBEcFwwzrO02whkZwDVISwi/Yux0OfCMvTXODLhVZ+g7l4tRjRUeBfZTZEQVS7s8E0W7OnGix9eEr5iqjQKMWJAqmguOl4WNIiLlY3ChRNOODPshcXQXLXCtbIbkyiOqBy1uZqFgLed4LMDT3SGFo4xr6S1oP/QnjLF2zE2PT2i4m8nbbiiGfr9MO7o6MxuirD5qKro4oMsEkBqImTQNUYMPJXPulUuukMt2pCDnrzNMu85V14Omjipz+idr1NN+GYT7y1mWYnmd4uhc7G/I0oGRHTlSgrJnqRYWN0pqx1mLH+YQnFOe3Efsh5gmtvZ2+JFyib2i9IfUHViSBpUuWH/apinGvas2eKWoAJSyau2vOvuoEHIfDsMD57CL5zE8+C2Z5MSritf/PFsA=
-    file:
-      - "trim-trailing-lines.js"
-      - "trim-trailing-lines.min.js"
-    on:
-      tags: true
-      node: '8.0'
+  provider: releases
+  api_key:
+    secure: PEJsl0k2RBHwkljnpyie6tnA2djAtJxoofoC/RSoFa+KIKCtFzoRYNrhYazVde/NYfeCkz5x8Y1sJoE9dew+LoVtoQrkxgdDums3wtNrYKVaa+0swkQBdQM736yrQ3Ec9VpRcGUJPWmJR3PChRLq7K0PkyemfRW0hvTHK3MIrzjB49b0TA3NUjTOYmxn82GDZXEcYz69hPm9GDY7HmWwZvSwv9Sp3dshFuxhT11rev/WQ/OZl/E7j/vESQhDZLJ8ir96e1pno/YQh3MUOb1TPmzdRhSmBEcFwwzrO02whkZwDVISwi/Yux0OfCMvTXODLhVZ+g7l4tRjRUeBfZTZEQVS7s8E0W7OnGix9eEr5iqjQKMWJAqmguOl4WNIiLlY3ChRNOODPshcXQXLXCtbIbkyiOqBy1uZqFgLed4LMDT3SGFo4xr6S1oP/QnjLF2zE2PT2i4m8nbbiiGfr9MO7o6MxuirD5qKro4oMsEkBqImTQNUYMPJXPulUuukMt2pCDnrzNMu85V14Omjipz+idr1NN+GYT7y1mWYnmd4uhc7G/I0oGRHTlSgrJnqRYWN0pqx1mLH+YQnFOe3Efsh5gmtvZ2+JFyib2i9IfUHViSBpUuWH/apinGvas2eKWoAJSyau2vOvuoEHIfDsMD57CL5zE8+C2Z5MSritf/PFsA=
+  file:
+    - "trim-trailing-lines.js"
+    - "trim-trailing-lines.min.js"
+  on:
+    tags: true
+    node: '8.0'
