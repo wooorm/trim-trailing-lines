@@ -10,7 +10,7 @@
     "newline",
     "characters"
   ],
-  "repository": "https://github.com/wooorm/trim-trailing-lines",
+  "repository": "wooorm/trim-trailing-lines",
   "bugs": "https://github.com/wooorm/trim-trailing-lines/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
