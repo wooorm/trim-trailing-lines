@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-- '4.0'
-- '8.0'
+- lts/boron
+- node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: PEJsl0k2RBHwkljnpyie6tnA2djAtJxoofoC/RSoFa+KIKCtFzoRYNrhYazVde/NYfeCkz5x8Y1sJoE9dew+LoVtoQrkxgdDums3wtNrYKVaa+0swkQBdQM736yrQ3Ec9VpRcGUJPWmJR3PChRLq7K0PkyemfRW0hvTHK3MIrzjB49b0TA3NUjTOYmxn82GDZXEcYz69hPm9GDY7HmWwZvSwv9Sp3dshFuxhT11rev/WQ/OZl/E7j/vESQhDZLJ8ir96e1pno/YQh3MUOb1TPmzdRhSmBEcFwwzrO02whkZwDVISwi/Yux0OfCMvTXODLhVZ+g7l4tRjRUeBfZTZEQVS7s8E0W7OnGix9eEr5iqjQKMWJAqmguOl4WNIiLlY3ChRNOODPshcXQXLXCtbIbkyiOqBy1uZqFgLed4LMDT3SGFo4xr6S1oP/QnjLF2zE2PT2i4m8nbbiiGfr9MO7o6MxuirD5qKro4oMsEkBqImTQNUYMPJXPulUuukMt2pCDnrzNMu85V14Omjipz+idr1NN+GYT7y1mWYnmd4uhc7G/I0oGRHTlSgrJnqRYWN0pqx1mLH+YQnFOe3Efsh5gmtvZ2+JFyib2i9IfUHViSBpUuWH/apinGvas2eKWoAJSyau2vOvuoEHIfDsMD57CL5zE8+C2Z5MSritf/PFsA=
   file:
@@ -12,4 +13,3 @@ deploy:
     - "trim-trailing-lines.min.js"
   on:
     tags: true
-    node: '8.0'
