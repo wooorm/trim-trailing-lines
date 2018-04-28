@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var trimTrailingLines = require('./');
+var trimTrailingLines = require('.');
 
 test('trimTrailingLines(value)', function (t) {
   t.equal(trimTrailingLines(true), 'true', 'should coerce to string');
