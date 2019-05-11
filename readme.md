@@ -52,4 +52,4 @@ Remove final newline characters from `value`.
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
