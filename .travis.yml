@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- lts/boron
-- node
+  - lts/dubnium
+  - node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: y0rvBAVO6rStDb6RSqm1VuAmureohjXgAGJIm1jsZUK60NeNJDVCFIf18k5aCtPnttrSB7M4Eo/QpLJGb4mTzWfd/QXC9jn2t2X8C0O39PZ+K/6Jf7bCzSlFqUtkRwlA0vsr7+EYJkaMGSTya3Z5AE7P3I/ocjApC6ou6xtOLeSKeXlunu/inyWLbQnjLtY+gqeY5Ew9JDoUfk1JaT/Lr902aBfpbERwko7gK8rfrX2L/yr2+6vL9SDQfBnDIRpuL7fTf+04EUosXbHG7ifmsCjNO4E0sNALEJeV8ukP4iGvRDkZ3QleuGyHVCk6Q9xQ61rr6YNv3tbdPopgX1HdM32Ca+RwSRWAxJgJnXfxepkmLvA79mw7yoOWmUOUwKC0UrxPBwY0tgmFXzmkbabp0PgIFKnAvqrTvpWIneoBECb/KAT9xdQ/8PgYsVPIDHHdFSQbspyeKPNYr+Wx80MocdDbtlWnO7VmpjA20l07xdLrp9RxU3JtrNlwD10XM+fF1JER7udVw4dzTERndb3vzfQbs6CZtJf8Fs1YD0L8OBxd1Uz62YN9VfaqDVA96jW1khg1B2oxBisciEPPOSeGLE9gwoSe8Mn9w95dw0LHHwKqsUb7yHuOGrWaNH7rY+eLCUeDMN55VN9P38508NEkCGaCAMqRxJGZcWbzO41jMzU=
+    secure: Gb53GwL0m+GCBLHNUm9wiru7sAS4S8pQRXvtEh7spnbjmjZXWdFJ1Q7/WD3YT4hwTEPrQQqUpGFEMgDCMQ/Wx3gDuEE7IvlHDkit/KzJuMMGVlNx0BU28OXnNlee0k2QUmePmGp+gssD+SJ50TtsrhgwmH80VDW/PBJBCi7zyWWAM6oiKtsSHM2bHtt6pbo96qSlzx0wOH1kydccZNLJ6JFSo0Ne/0y+/k3R/qxF7UsbUTFLStENrNJW4Ck4JpqeufXDkH/nhZTgQUlItW7ojW0W8Io2rj2N4nnOJWlwUj9UHejPDNoxDFcVQqIenFdaqdWN1Npl7oEFlxy/W1mzbE4bQKceiGMkaMvOoMBAt4rdXZbE/8MZCkD9hErq+Evo5W20XoSeNh/GEYwbQTN4gq8BmrZ1Zoxt6N7ZF4A/ULcXt+jmbwVfuKT0ggo3UOl7wwekYrscPp8TSfAcVMguknCQJT9l3Uyw6DOawwSChRZONWfju6wrzbknmpXNR8vJced67snGvIwUV7OdpEaOAv9H/HLwUpkrBlaRqFZaudQCWBd2N5GSgwdk/CqBjPzNlMY2Q3juTnkfm6KxoyNDSC80/isdiw8NWpAlnTrUSvPGWnFhx8wwO98B6xnbLoZ9OJAYFpahFOjQz9fAnD2o369elvtrLhBI3rMDmxD30YU=
   file:
-    - "trim-trailing-lines.js"
-    - "trim-trailing-lines.min.js"
+    - 'trim-trailing-lines.js'
+    - 'trim-trailing-lines.min.js'
   on:
     tags: true
