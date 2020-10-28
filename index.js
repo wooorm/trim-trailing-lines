@@ -6,12 +6,12 @@ var line = '\n'
 
 // Remove final newline characters from `value`.
 function trimTrailingLines(value) {
-  var val = String(value)
-  var index = val.length
+  var string = String(value)
+  var index = string.length
 
-  while (val.charAt(--index) === line) {
+  while (string.charAt(--index) === line) {
     // Empty
   }
 
-  return val.slice(0, index + 1)
+  return string.slice(0, index + 1)
 }

@@ -3,7 +3,7 @@
 var test = require('tape')
 var trimTrailingLines = require('.')
 
-test('trimTrailingLines(value)', function(t) {
+test('trimTrailingLines(value)', function (t) {
   t.equal(trimTrailingLines(true), 'true', 'should coerce to string')
   t.equal(trimTrailingLines(''), '', 'should work (1)')
   t.equal(trimTrailingLines('foo'), 'foo', 'should work (2)')
