@@ -45,9 +45,9 @@ Remove final line feed characters from `value`.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/trim-trailing-lines.svg
+[build-badge]: https://github.com/wooorm/trim-trailing-lines/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/trim-trailing-lines
+[build]: https://github.com/wooorm/trim-trailing-lines/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/trim-trailing-lines.svg
 
