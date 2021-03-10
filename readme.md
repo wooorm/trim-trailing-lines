@@ -9,6 +9,9 @@ Remove final line feeds from a string.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -18,7 +21,7 @@ npm install trim-trailing-lines
 ## Use
 
 ```js
-var trimTrailingLines = require('trim-trailing-lines')
+import {trimTrailingLines} from 'trim-trailing-lines'
 
 trimTrailingLines('foo\nbar') // => 'foo\nbar'
 trimTrailingLines('foo\nbar\n') // => 'foo\nbar'
@@ -26,6 +29,9 @@ trimTrailingLines('foo\nbar\n\n') // => 'foo\nbar'
 ```
 
 ## API
+
+This package exports the following identifiers: `trimTrailingLines`.
+There is no default export.
 
 ### `trimTrailingLines(value)`
 

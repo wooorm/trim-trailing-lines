@@ -3,6 +3,4 @@
 .nyc_output/
 coverage/
 node_modules/
-trim-trailing-lines.js
-trim-trailing-lines.min.js
 yarn.lock

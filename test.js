@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var trimTrailingLines = require('.')
+import test from 'tape'
+import {trimTrailingLines} from './index.js'
 
 test('trimTrailingLines(value)', function (t) {
   t.equal(trimTrailingLines(true), 'true', 'should coerce to string')
