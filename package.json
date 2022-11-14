@@ -1,6 +1,6 @@
 {
   "name": "trim-trailing-lines",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Remove final line feeds from a string",
   "license": "MIT",
   "keywords": [
