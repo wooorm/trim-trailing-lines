@@ -5,17 +5,53 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-Remove final line feeds from a string.
+Remove final line endings from a string.
+
+## Contents
+
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`trimTrailingLines(value)`](#trimtrailinglinesvalue)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Contribute](#contribute)
+*   [Security](#security)
+*   [License](#license)
+
+## What is this?
+
+This is a tiny package that removes final line endings (CR, LF, CR+LF) from a
+string.
+
+## When should I use this?
+
+This package is rather niche, I found myself repeating this code when working
+with a lot of markdown.
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c):
-Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install trim-trailing-lines
+```
+
+In Deno with [`esm.sh`][esmsh]:
+
+```js
+import {trimTrailingLines} from 'https://esm.sh/trim-trailing-lines@2'
+```
+
+In browsers with [`esm.sh`][esmsh]:
+
+```html
+<script type="module">
+  import {trimTrailingLines} from 'https://esm.sh/trim-trailing-lines@2?bundle'
+</script>
 ```
 
 ## Use
@@ -30,20 +66,42 @@ trimTrailingLines('foo\nbar\n\n') // => 'foo\nbar'
 
 ## API
 
-This package exports the following identifiers: `trimTrailingLines`.
+This package exports the identifier `trimTrailingLines`.
 There is no default export.
 
 ### `trimTrailingLines(value)`
 
-Remove final line feed characters from `value`.
+Remove final line endings from `value`.
 
-###### Parameters
+##### Parameters
 
-*   `value` (`string`) — Value with trailing line feeds, coerced to string.
+###### `valeu`
 
-###### Returns
+Value with trailing line endings, coerced to string (`unknown`).
 
-`string` — Value without trailing newlines.
+##### Returns
+
+Value without trailing line endings (`string`).
+
+## Types
+
+This package is fully typed with [TypeScript][].
+It exports no additional types.
+
+## Compatibility
+
+This package is at least compatible with all maintained versions of Node.js.
+As of now, that is Node.js 14.14+ and 16.0+.
+It also works in Deno and modern browsers.
+
+## Contribute
+
+Yes please!
+See [How to Contribute to Open Source][contribute].
+
+## Security
+
+This package is safe.
 
 ## License
 
@@ -68,6 +126,14 @@ Remove final line feed characters from `value`.
 [size]: https://bundlephobia.com/result?p=trim-trailing-lines
 
 [npm]: https://docs.npmjs.com/cli/install
+
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[esmsh]: https://esm.sh
+
+[typescript]: https://www.typescriptlang.org
+
+[contribute]: https://opensource.guide/how-to-contribute/
 
 [license]: license
 
